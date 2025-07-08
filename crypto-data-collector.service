@@ -1,0 +1,17 @@
+[Unit]
+Description=Crypto Data Collector Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/crypto_data_collector
+Environment=PATH=/usr/bin:/usr/local/bin:/home/ubuntu/.local/bin
+ExecStart=/usr/bin/python3 /home/ubuntu/crypto_data_collector/cron_runner.py 2
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

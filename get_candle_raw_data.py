@@ -4,10 +4,10 @@ import os
 import time
 from ws_client import BitgetWS
 from rest_api import target_list_coin  # Đảm bảo biến này được định nghĩa đúng
-from load_to_sql import load_to_db
+from load_to_sql_vps import load_to_db
 
 # --- Logging setup ---
-log_dir = r'scripts_get_data\log'
+log_dir = os.path.join(os.path.dirname(__file__), 'log')
 os.makedirs(log_dir, exist_ok=True)
 logging.basicConfig(
     level=logging.INFO,
