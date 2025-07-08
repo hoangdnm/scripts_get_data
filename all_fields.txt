@@ -1,0 +1,51 @@
+# =================================
+# LIBRARIES AND MODULES CONFIGURATION
+# =================================
+
+# ===== PYTHON STANDARD LIBRARIES =====
+import json
+import datetime
+import threading
+import time
+import subprocess
+import os
+import logging
+
+# ===== THIRD-PARTY LIBRARIES =====
+import websocket
+import pandas as pd
+import sqlalchemy
+from sqlalchemy import create_engine
+import pyodbc
+import requests
+
+# ===== LOCAL MODULES =====
+from ws_client import BitgetWS
+from rest_api import target_list_coin, get_all_spot_pairs
+from load_to_sql import load_to_db
+from log import setup_logger
+
+# ===== REQUIREMENTS.TXT =====
+# Các thư viện cần cài đặt:
+websocket-client
+pandas
+sqlalchemy
+pyodbc
+requests
+
+# ===== DOCKER SERVICES =====
+# Các service trong docker-compose:
+mssql
+# n8n (đã xóa)
+
+# ===== DATABASE DRIVERS =====
+# Driver cần cài đặt:
+ODBC Driver 17 for SQL Server
+
+# ===== COMMON IMPORTS =====
+# Import thường dùng trong các file Python:
+import logging          # Để ghi log
+import pandas as pd     # Xử lý dữ liệu
+import time            # Đo thời gian
+import os              # Thao tác file/folder
+from sqlalchemy import create_engine  # Kết nối database

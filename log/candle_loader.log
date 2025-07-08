@@ -1,0 +1,17 @@
+2025-07-07 21:50:32,785 - INFO - Đang lấy dữ liệu candle 1m cho
+2025-07-07 21:50:33,303 - INFO - Websocket connected
+2025-07-07 21:50:34,304 - INFO - Thu thập thành công 50 dòng
+2025-07-07 21:50:50,090 - ERROR - ❌ Lỗi khi load vào DB: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-07 21:56:13,857 - INFO - Đang lấy dữ liệu candle 1m cho
+2025-07-07 21:56:14,324 - INFO - Websocket connected
+2025-07-07 21:56:15,380 - INFO - Thu thập thành công 50 dòng
+2025-07-07 21:56:15,571 - INFO - ✅ Thành công load vào DB.
+2025-07-07 22:06:54,190 - INFO - Đang lấy dữ liệu candle 1m cho
+2025-07-07 22:06:54,699 - INFO - Websocket connected
+2025-07-07 22:06:55,705 - INFO - Thu thập thành công 50 dòng
+2025-07-07 22:06:55,812 - INFO - ✅ Thành công load vào DB.
+2025-07-07 23:15:42,955 - INFO - Đang lấy dữ liệu candle 1m cho
+2025-07-07 23:15:43,426 - INFO - Websocket connected
+2025-07-07 23:15:44,474 - INFO - Thu thập thành công 50 dòng
+2025-07-07 23:15:49,480 - INFO - ✅ Thành công load vào DB.

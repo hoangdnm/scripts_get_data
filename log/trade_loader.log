@@ -1,0 +1,17 @@
+2025-07-07 21:50:32,785 - INFO - 📡 Đang lấy dữ liệu trade
+2025-07-07 21:50:33,303 - INFO - Websocket connected
+2025-07-07 21:50:34,310 - INFO - ✅ Đã lấy thành công dữ liệu tổng cộng 50 dòng.
+2025-07-07 21:50:50,093 - ERROR - ❌ Lỗi khi load dữ liệu vào DB: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-07-07 21:56:13,857 - INFO - 📡 Đang lấy dữ liệu trade
+2025-07-07 21:56:14,317 - INFO - Websocket connected
+2025-07-07 21:56:15,399 - INFO - ✅ Đã lấy thành công dữ liệu tổng cộng 50 dòng.
+2025-07-07 21:56:15,567 - INFO - 🎉 Thành công load dữ liệu trade vào DB.
+2025-07-07 22:06:54,223 - INFO - 📡 Đang lấy dữ liệu trade
+2025-07-07 22:06:54,687 - INFO - Websocket connected
+2025-07-07 22:06:55,743 - INFO - ✅ Đã lấy thành công dữ liệu tổng cộng 50 dòng.
+2025-07-07 22:06:55,851 - INFO - 🎉 Thành công load dữ liệu trade vào DB.
+2025-07-07 23:15:42,951 - INFO - 📡 Đang lấy dữ liệu trade
+2025-07-07 23:15:43,426 - INFO - Websocket connected
+2025-07-07 23:15:44,474 - INFO - ✅ Đã lấy thành công dữ liệu tổng cộng 50 dòng.
+2025-07-07 23:15:49,433 - INFO - 🎉 Thành công load dữ liệu trade vào DB.
