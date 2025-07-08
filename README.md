@@ -29,6 +29,10 @@ scripts_get_data/
 ├── .env.example              # Template cấu hình
 ├── start_vps.sh              # Script khởi động Linux
 ├── start_windows.bat         # Script khởi động Windows
+├── test_linux.sh             # Test runner Linux
+├── test_windows.bat          # Test runner Windows
+├── run_tests.py              # Full test suite
+├── quick_test.py             # Quick test script
 ├── crypto-data-collector.service  # Systemd service
 ├── VPS_SETUP.md              # Hướng dẫn setup VPS
 └── log/                      # Thư mục logs
@@ -91,6 +95,107 @@ python3 cron_runner.py 2
    - `get_trade_raw_data.py` - Dữ liệu trade
 4. Mỗi script kết nối WebSocket, thu thập dữ liệu và lưu vào database
 5. Tất cả hoạt động được log chi tiết
+
+## 🧪 Testing
+
+### Quick Test (Khuyến nghị)
+```bash
+# Windows
+python quick_test.py
+
+# Linux/VPS
+python3 quick_test.py
+```
+
+### Full Test Suite
+```bash
+# Windows
+python run_tests.py
+
+# Linux/VPS
+python3 run_tests.py
+```
+
+### Interactive Test Menu
+```bash
+# Windows
+test_windows.bat
+
+# Linux/VPS
+chmod +x test_linux.sh
+./test_linux.sh
+```
+
+### Test từng component riêng lẻ
+
+#### 1. Test Database Connection
+```bash
+python3 -c "from quick_test import quick_test_database; quick_test_database()"
+```
+
+#### 2. Test WebSocket Connection
+```bash
+python3 -c "from quick_test import quick_test_websocket; quick_test_websocket()"
+```
+
+#### 3. Test Individual Scripts
+```bash
+# Test candle data
+python3 get_candle_raw_data.py
+
+# Test ticker data
+python3 get_ticker_raw_data.py
+
+# Test trade data
+python3 get_trade_raw_data.py
+```
+
+#### 4. Test Main Process
+```bash
+python3 main.py
+```
+
+#### 5. Test Cron Runner (2 phút)
+```bash
+python3 cron_runner.py 0.033
+```
+
+#### 6. Test Health Check
+```bash
+python3 health_check.py
+```
+
+### Các loại test
+
+| Test | Mô tả | Thời gian |
+|------|--------|-----------|
+| Quick Test | Test cơ bản: import, database, websocket | ~30s |
+| Full Test | Test toàn bộ hệ thống | ~3 phút |
+| Database Test | Chỉ test kết nối database | ~5s |
+| WebSocket Test | Chỉ test WebSocket connection | ~10s |
+| Cron Test | Test cron runner trong 2 phút | ~2 phút |
+| Health Check | Kiểm tra tình trạng hệ thống | ~10s |
+
+### Hiểu kết quả test
+
+#### ✅ Test thành công
+```
+🎉 KHAI BÁO: Hệ thống đã sẵn sàng cho production!
+Bạn có thể deploy lên VPS và setup cron job.
+```
+
+#### ❌ Test thất bại
+```
+❌ CẢNH BÁO: Hệ thống chưa sẵn sàng!
+Vui lòng sửa các lỗi trước khi deploy.
+```
+
+### Troubleshooting Test Issues
+
+1. **Import Error**: Chạy `pip install -r requirements.txt`
+2. **Database Error**: Kiểm tra file `.env` và database connection
+3. **WebSocket Error**: Kiểm tra internet connection
+4. **Permission Error**: Chạy `chmod +x *.py *.sh`
 
 ## 🛠️ Cấu hình
 
